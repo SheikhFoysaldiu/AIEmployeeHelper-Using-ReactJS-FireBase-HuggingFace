@@ -20,7 +20,7 @@ const Home = () => {
           <Typewriter
           className="text-textHeaderColor text-3xl text-center px-3"
               options={{
-                strings: [`Hello , ${user?.email}`, 'Please Choose a Module'],
+                strings: [`Hello , ${user?.email ? user?.email : "Sir" }`, 'Please Choose a Module'],
                 autoStart: true,
                 loop: true,
               }}
