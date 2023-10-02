@@ -1,5 +1,6 @@
 # AIEmployeeHelper-Using-ReactJS-FireBase-HuggingFace
-Build An Helper AI With HuggingFace Inference API.
+Build An Helper AI With HuggingFace Inference API. (Commented This Version)
+
 Build An Helper AI With OpenAI
 
 # Here is Project Demonstration
