@@ -44,7 +44,7 @@ const Login = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <p className="text-3xl">Welcome back!</p>
-      <h2 className="text-5xl text-transparent bg-clip-text bg-gradient-to-r from-aboutGradientStart to-aboutGradientEnd font-bold pb-10">
+      <h2 className="sm: text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-aboutGradientStart to-aboutGradientEnd font-bold pb-10">
         Login to continue
       </h2>
       <div className="w-3/4 md:w-2/4 lg:w-[476px] border border-btnColor rounded-3xl">
