@@ -32,6 +32,7 @@ const AiProvider = ({ children }) => {
       }
       const responseCorrect = response?.data?.choices[0]?.text;
       setOutput(responseCorrect);
+
     } catch (error) {
       console.log(error.message);
     }
@@ -49,6 +50,7 @@ const AiProvider = ({ children }) => {
     processRequest,
     isLoading,
     setIsLoading,
+    setOutput
   };
 
   return <AiContext.Provider value={aiInfo}>{children}</AiContext.Provider>;

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AiContext } from "../../contexts/AiContext";
 
 const AIDA = () => {
-  const { output, processRequest, isLoading, setIsLoading,  } =
+  const { output, processRequest, isLoading, setIsLoading,  setOutput} =
     useContext(AiContext);
 
   const [textCount, setTextCount] = useState(0);
@@ -17,7 +17,9 @@ const AIDA = () => {
     const input = document.getElementById("input")?.value;
     const prompt =
       "You are experienced in AIDA Framework, write a detailed AIDA Framework for:";
-    setIsLoading(true);
+      setOutput("");
+      setIsLoading(true);
+
     processRequest(prompt, input);
   };
 
@@ -78,7 +80,8 @@ const AIDA = () => {
             <textarea
               className={`p-2 w-full rounded-xl border-none focus:outline-none bg-bgTextareaColor`}
               placeholder=""
-              defaultValue={output}
+              value={output}
+              onChange={()=> setOutput(output)}
               cols="10"
               rows="10"
             ></textarea>

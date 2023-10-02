@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AiContext } from "../../contexts/AiContext";
 
 const CareerConsultant = () => {
-  const { output, processRequest, isLoading, setIsLoading, } =
+  const { output, processRequest, isLoading, setIsLoading,setOutput } =
     useContext(AiContext);
 
   const [textCount, setTextCount] = useState(0);
@@ -16,7 +16,8 @@ const CareerConsultant = () => {
     const input = document.getElementById("input")?.value;
     const prompt =
       "You are an expert career consultant, provide a impactful and well thought out career consultancy for:";
-    setIsLoading(true);
+      setOutput("");
+      setIsLoading(true);
     processRequest(prompt, input);
   };
 
@@ -77,7 +78,8 @@ const CareerConsultant = () => {
             <textarea
               className={`p-2 w-full rounded-xl border-none focus:outline-none bg-bgTextareaColor`}
               placeholder=""
-              defaultValue={output}
+              value={output}
+              onChange={()=> setOutput(output)}
               cols="10"
               rows="10"
             ></textarea>
