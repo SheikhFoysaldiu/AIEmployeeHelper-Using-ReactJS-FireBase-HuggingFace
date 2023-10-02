@@ -15,10 +15,10 @@ const PersonalAssistant = () => {
 
   const handleClick = () => {
     const input = document.getElementById("input")?.value;
-    // const prompt =
-      // "Act like a personal assistant, provide structured assistance and data driven decision on";
+    const prompt =
+      "Act like a personal assistant, provide structured assistance and data driven decision on";
     setIsLoading(true);
-    processRequest(input);
+    processRequest(prompt, input);
   };
 
   const handleChange = (event) => {
